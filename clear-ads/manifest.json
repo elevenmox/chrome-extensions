@@ -1,0 +1,18 @@
+﻿{
+	"manifest_version": 2,
+	"name": "clear-ads-elements",	
+	"description": "This extension will find ads elements and remove them after page loaded",
+	"version": "1.0",
+	"author": "eleven",
+	"browser_action": {
+		"default_icon": "icon.png"
+	},
+	"content_scripts": [
+		{
+			"js": ["clear-ads.user.js"],
+			"matches": [ "*://*/*"],
+      "run_at": "document_end"
+		}
+	],
+	"permissions": ["activeTab"] //?
+}
